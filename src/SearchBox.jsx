@@ -39,6 +39,8 @@ export default function SearchBox({ updateInfo }) {
     }
     let handleSubmit = async(evt) =>{
         evt.preventDefault();
+        console.log("API KEY:", import.meta.env.VITE_WEATHER_API_KEY);
+
         try {
         console.log(city);
         let newInfo = await getWeatherInfo();
